@@ -1,2 +1,2 @@
 # ClearLinkMonitor
-a simple utility for monitoring Teknic ClearLink devices.
+A simple utility for monitoring Teknic ClearLink devices.
