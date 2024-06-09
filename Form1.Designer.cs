@@ -269,6 +269,18 @@
             button7 = new Button();
             button8 = new Button();
             motorControls = new GroupBox();
+            button12 = new Button();
+            btnStopPos = new Button();
+            button11 = new Button();
+            lblMoveVelo = new Label();
+            button10 = new Button();
+            button9 = new Button();
+            label33 = new Label();
+            txtDecel = new TextBox();
+            txtMovVelocity = new TextBox();
+            btnMovePositional = new Button();
+            lblMoveDist = new Label();
+            txtMoveDist = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -2143,6 +2155,18 @@
             // motorControls
             // 
             resources.ApplyResources(motorControls, "motorControls");
+            motorControls.Controls.Add(button12);
+            motorControls.Controls.Add(btnStopPos);
+            motorControls.Controls.Add(button11);
+            motorControls.Controls.Add(lblMoveVelo);
+            motorControls.Controls.Add(button10);
+            motorControls.Controls.Add(button9);
+            motorControls.Controls.Add(label33);
+            motorControls.Controls.Add(txtDecel);
+            motorControls.Controls.Add(txtMovVelocity);
+            motorControls.Controls.Add(btnMovePositional);
+            motorControls.Controls.Add(lblMoveDist);
+            motorControls.Controls.Add(txtMoveDist);
             motorControls.Controls.Add(checkBox3);
             motorControls.Controls.Add(button8);
             motorControls.Controls.Add(textBox1);
@@ -2164,6 +2188,78 @@
             motorControls.Controls.Add(checkBox10);
             motorControls.Name = "motorControls";
             motorControls.TabStop = false;
+            // 
+            // button12
+            // 
+            resources.ApplyResources(button12, "button12");
+            button12.Name = "button12";
+            button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click;
+            // 
+            // btnStopPos
+            // 
+            resources.ApplyResources(btnStopPos, "btnStopPos");
+            btnStopPos.Name = "btnStopPos";
+            btnStopPos.UseVisualStyleBackColor = true;
+            btnStopPos.Click += btnStopPos_Click;
+            // 
+            // button11
+            // 
+            resources.ApplyResources(button11, "button11");
+            button11.Name = "button11";
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
+            // 
+            // lblMoveVelo
+            // 
+            resources.ApplyResources(lblMoveVelo, "lblMoveVelo");
+            lblMoveVelo.Name = "lblMoveVelo";
+            // 
+            // button10
+            // 
+            resources.ApplyResources(button10, "button10");
+            button10.Name = "button10";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
+            // 
+            // button9
+            // 
+            resources.ApplyResources(button9, "button9");
+            button9.Name = "button9";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click_1;
+            // 
+            // label33
+            // 
+            resources.ApplyResources(label33, "label33");
+            label33.Name = "label33";
+            // 
+            // txtDecel
+            // 
+            resources.ApplyResources(txtDecel, "txtDecel");
+            txtDecel.Name = "txtDecel";
+            // 
+            // txtMovVelocity
+            // 
+            resources.ApplyResources(txtMovVelocity, "txtMovVelocity");
+            txtMovVelocity.Name = "txtMovVelocity";
+            // 
+            // btnMovePositional
+            // 
+            resources.ApplyResources(btnMovePositional, "btnMovePositional");
+            btnMovePositional.Name = "btnMovePositional";
+            btnMovePositional.UseVisualStyleBackColor = true;
+            btnMovePositional.Click += btnMovePositional_Click;
+            // 
+            // lblMoveDist
+            // 
+            resources.ApplyResources(lblMoveDist, "lblMoveDist");
+            lblMoveDist.Name = "lblMoveDist";
+            // 
+            // txtMoveDist
+            // 
+            resources.ApplyResources(txtMoveDist, "txtMoveDist");
+            txtMoveDist.Name = "txtMoveDist";
             // 
             // Form1
             // 
@@ -2467,5 +2563,17 @@
         private Button button7;
         private Button button8;
         private GroupBox motorControls;
+        private Button button10;
+        private Button button9;
+        private Label label33;
+        private TextBox txtDecel;
+        private TextBox txtMovVelocity;
+        private Button btnMovePositional;
+        private Label lblMoveDist;
+        private TextBox txtMoveDist;
+        private Button button11;
+        private Label lblMoveVelo;
+        private Button btnStopPos;
+        private Button button12;
     }
 }

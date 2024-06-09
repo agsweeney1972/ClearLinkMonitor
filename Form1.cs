@@ -164,10 +164,25 @@ namespace WinUI_ClearCore
             rdoCCIO8_6.Checked = myCCIOIOStatus[62];
             rdoCCIO8_7.Checked = myCCIOIOStatus[63];
 
+            if (rdoLoadPosMoveAck.Checked)
+            {
+                checkBox6.Checked = false;
+            };
+
             if (rdoLoadVelocityMoveAck.Checked)
             {
                 checkBox7.Checked = false;
             };
+
+            if (checkBox4.Checked)
+            {
+                lblMoveDist.Text = "Move to Absolute Position";
+            }
+            else
+            {
+                lblMoveDist.Text = "Move Distance";
+            }
+
 
             if (rdoClearMotorFaultAct.Checked)
             {
@@ -655,7 +670,7 @@ namespace WinUI_ClearCore
                 grpStatusReg.Text = "Motor 0 Status Reg";
                 grpFeedback.Text = "Motor 0 Motion Data";
                 grpConfigData.Text = "Motor 0 Config Data";
-                myInstance = 1; 
+                myInstance = 1;
                 UpdateOutputRegs();
 
 
@@ -745,14 +760,9 @@ namespace WinUI_ClearCore
         {
 
             int myVelocity = Convert.ToInt32(textBox1.Text);
-
-
             byte[] intBytes = BitConverter.GetBytes(myVelocity);
-            //Array.Reverse(intBytes);
-            byte[] result = intBytes;
-
-
-            eeipClient.SetAttributeSingle(0x66, myInstance, 2, result);
+            //byte[] result = intBytes;
+            eeipClient.SetAttributeSingle(0x66, myInstance, 2, intBytes);
             checkBox7.Checked = true;
         }
 
@@ -879,13 +889,8 @@ namespace WinUI_ClearCore
         private void button3_Click(object sender, EventArgs e)
         {
             int myAccel = Convert.ToInt32(txtAccel.Text);
-
-
             byte[] intBytes = BitConverter.GetBytes(myAccel);
-            //Array.Reverse(intBytes);
             byte[] accelResult = intBytes;
-
-
             eeipClient.SetAttributeSingle(0x66, myInstance, 4, accelResult);
 
         }
@@ -893,12 +898,8 @@ namespace WinUI_ClearCore
         private void button4_Click(object sender, EventArgs e)
         {
             int myVelocity = 0;
-
-
             byte[] intBytes = BitConverter.GetBytes(myVelocity);
-            //Array.Reverse(intBytes);
             byte[] result = intBytes;
-
             eeipClient.SetAttributeSingle(0x66, myInstance, 2, result);
             checkBox7.Checked = true;
         }
@@ -907,13 +908,9 @@ namespace WinUI_ClearCore
         {
 
             int myVelocity = Convert.ToInt32(textBox1.Text);
-
             int myReVelocity = myVelocity * -1;
             byte[] intBytes = BitConverter.GetBytes(myReVelocity);
-
             byte[] result = intBytes;
-
-
             eeipClient.SetAttributeSingle(0x66, myInstance, 2, result);
             checkBox7.Checked = true;
         }
@@ -921,13 +918,8 @@ namespace WinUI_ClearCore
         private void button6_Click(object sender, EventArgs e)
         {
             int myVelocity = Convert.ToInt32(textBox1.Text);
-
-
             byte[] intBytes = BitConverter.GetBytes(myVelocity);
-            //Array.Reverse(intBytes);
             byte[] result = intBytes;
-
-
             eeipClient.SetAttributeSingle(0x66, myInstance, 2, result);
         }
 
@@ -946,7 +938,6 @@ namespace WinUI_ClearCore
             int myCommandedPosition = BitConverter.ToInt32(CommandedPosition, 0);
             int myCurrentPosition = myCommandedPosition * -1;
             byte[] intBytes = BitConverter.GetBytes(myCurrentPosition);
-            //Array.Reverse(intBytes);
             byte[] result = intBytes;
             eeipClient.SetAttributeSingle(0x66, myInstance, 7, result);
 
@@ -983,19 +974,93 @@ namespace WinUI_ClearCore
             checkBox9.Checked = myControlReg[6];
             checkBox10.Checked = myControlReg[7];
 
-            byte[] CurrentAccel = eeipClient.GetAttributeSingle(0x66, myInstance, 4);
-            int myCurrentAccel = BitConverter.ToInt32(CurrentAccel, 0);
-            txtAccel.Text = myCurrentAccel.ToString();
-
+            byte[] CurrentMoveDistance = eeipClient.GetAttributeSingle(0x66, myInstance, 1);
+            int myCurrentMoveDistance = BitConverter.ToInt32(CurrentMoveDistance, 0);
+            txtMoveDist.Text = myCurrentMoveDistance.ToString();
 
             byte[] CurrentVelocity = eeipClient.GetAttributeSingle(0x66, myInstance, 2);
             int myCurrentVeloc = BitConverter.ToInt32(CurrentVelocity, 0);
             textBox1.Text = myCurrentVeloc.ToString();
+
+            byte[] CurrentMoveVelocity = eeipClient.GetAttributeSingle(0x66, myInstance, 3);
+            int myCurrentMoveVelocity = BitConverter.ToInt32(CurrentMoveVelocity, 0);
+            txtMovVelocity.Text = myCurrentMoveVelocity.ToString();
+
+            byte[] CurrentAccel = eeipClient.GetAttributeSingle(0x66, myInstance, 4);
+            int myCurrentAccel = BitConverter.ToInt32(CurrentAccel, 0);
+            txtAccel.Text = myCurrentAccel.ToString();
+
+            byte[] CurrentDecel = eeipClient.GetAttributeSingle(0x66, myInstance, 5);
+            int myCurrentDecel = BitConverter.ToInt32(CurrentDecel, 0);
+            txtDecel.Text = myCurrentDecel.ToString();
+
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             UpdateOutputRegs();
+        }
+
+        private void btnMovePositional_Click(object sender, EventArgs e)
+        {
+            if (txtMoveDist != null && !string.IsNullOrWhiteSpace(txtMoveDist.Text))
+            {
+                int myMoveDistance = Convert.ToInt32(txtMoveDist.Text);
+                byte[] intBytes = BitConverter.GetBytes(myMoveDistance);
+                eeipClient.SetAttributeSingle(0x66, myInstance, 1, intBytes);
+                checkBox6.Checked = true;
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (txtMovVelocity != null && !string.IsNullOrWhiteSpace(txtMovVelocity.Text))
+            {
+                int myPosVelocity = Convert.ToInt32(txtMovVelocity.Text);
+                byte[] intBytes = BitConverter.GetBytes(myPosVelocity);
+                if (myPosVelocity >= 0)
+                {
+                    eeipClient.SetAttributeSingle(0x66, myInstance, 3, intBytes);
+
+                    if (rdoStepsActive.Checked && rdoPosMove.Checked) // Update in process move
+                    {
+                        checkBox6.Checked = true;
+                    }
+
+                }
+            }
+        }
+
+        private void btnStopPos_Click(object sender, EventArgs e)
+        {
+            int myMoveDistance = 0;
+            byte[] intBytes = BitConverter.GetBytes(myMoveDistance);
+            eeipClient.SetAttributeSingle(0x66, myInstance, 1, intBytes);
+            checkBox8.Checked = true;
+
+        }
+
+        private void button9_Click_1(object sender, EventArgs e)
+        {
+            int myDecel = Convert.ToInt32(txtDecel.Text);
+            byte[] intBytes = BitConverter.GetBytes(myDecel);
+            byte[] decelResult = intBytes;
+            eeipClient.SetAttributeSingle(0x66, myInstance, 5, decelResult);
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            byte[] CurrentDecel = eeipClient.GetAttributeSingle(0x66, myInstance, 5);
+            int myCurrentDecel = BitConverter.ToInt32(CurrentDecel, 0);
+            txtDecel.Text = myCurrentDecel.ToString();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            byte[] CurrentMoveVelocity = eeipClient.GetAttributeSingle(0x66, myInstance, 3);
+            int myCurrentMoveVelocity = BitConverter.ToInt32(CurrentMoveVelocity, 0);
+            txtMovVelocity.Text = myCurrentMoveVelocity.ToString();
         }
     }
 }
