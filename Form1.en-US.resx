@@ -2821,16 +2821,16 @@
     <value>NoControl</value>
   </data>
   <data name="label27.Location" type="System.Drawing.Point, System.Drawing">
-    <value>928, 705</value>
+    <value>954, 707</value>
   </data>
   <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 14</value>
+    <value>139, 14</value>
   </data>
   <data name="label27.TabIndex" type="System.Int32, mscorlib">
     <value>48</value>
   </data>
   <data name="label27.Text" xml:space="preserve">
-    <value>Copyright 2023 - Adam G. Sweeney</value>
+    <value>6/9/2024 - Adam G. Sweeney</value>
   </data>
   <data name="label27.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -2838,11 +2838,17 @@
   <data name="linkLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>454, 705</value>
+  </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 15</value>
   </data>
   <data name="linkLabel1.Text" xml:space="preserve">
     <value>ClearLink EthernetIP Reference</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 701</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 23</value>
@@ -2869,13 +2875,13 @@
     <value>Cambria, 9.75pt</value>
   </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 278</value>
+    <value>13, 42</value>
   </data>
   <data name="button2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Cambria, 9.75pt</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 278</value>
+    <value>119, 42</value>
   </data>
   <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 23</value>
@@ -3010,7 +3016,7 @@
     <value>Clear Motor Fault</value>
   </data>
   <data name="label32.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 260</value>
+    <value>13, 24</value>
   </data>
   <data name="label32.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 15</value>
@@ -3025,7 +3031,7 @@
     <value>NoControl</value>
   </data>
   <data name="label34.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 339</value>
+    <value>7, 18</value>
   </data>
   <data name="label34.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 15</value>
@@ -3043,7 +3049,7 @@
     <value>NoControl</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 357</value>
+    <value>113, 36</value>
   </data>
   <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 23</value>
@@ -3055,13 +3061,13 @@
     <value>Cambria, 9.75pt</value>
   </data>
   <data name="txtAccel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 357</value>
+    <value>7, 36</value>
   </data>
   <data name="button4.Font" type="System.Drawing.Font, System.Drawing">
     <value>Cambria, 9.75pt</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 307</value>
+    <value>119, 71</value>
   </data>
   <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 23</value>
@@ -3076,7 +3082,7 @@
     <value>NoControl</value>
   </data>
   <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 278</value>
+    <value>175, 42</value>
   </data>
   <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 23</value>
@@ -3091,7 +3097,7 @@
     <value>NoControl</value>
   </data>
   <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 307</value>
+    <value>13, 71</value>
   </data>
   <data name="button6.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 23</value>
@@ -3106,7 +3112,7 @@
     <value>NoControl</value>
   </data>
   <data name="button7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 357</value>
+    <value>169, 36</value>
   </data>
   <data name="button7.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 23</value>
@@ -3118,13 +3124,103 @@
     <value>Cambria, 9.75pt</value>
   </data>
   <data name="button8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 227</value>
+    <value>57, 224</value>
   </data>
   <data name="button8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 23</value>
+    <value>135, 25</value>
   </data>
   <data name="button8.Text" xml:space="preserve">
     <value>Zero Position Counter</value>
+  </data>
+  <data name="groupBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 100</value>
+  </data>
+  <data name="groupBox7.Text" xml:space="preserve">
+    <value>Velocity Moves</value>
+  </data>
+  <data name="button10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="button10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 80</value>
+  </data>
+  <data name="button10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 23</value>
+  </data>
+  <data name="button10.Text" xml:space="preserve">
+    <value>Get</value>
+  </data>
+  <data name="button9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="button9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>113, 80</value>
+  </data>
+  <data name="button9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 23</value>
+  </data>
+  <data name="button9.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="button9.Text" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="txtDecel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="txtDecel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 80</value>
+  </data>
+  <data name="label33.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label33.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 62</value>
+  </data>
+  <data name="label33.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 15</value>
+  </data>
+  <data name="label33.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="label33.Text" xml:space="preserve">
+    <value>Deceleration</value>
+  </data>
+  <data name="groupBox8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 112</value>
+  </data>
+  <data name="groupBox8.Text" xml:space="preserve">
+    <value>Common Settings</value>
+  </data>
+  <data name="lblMoveDist.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblMoveDist.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="lblMoveDist.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMoveDist.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 20</value>
+  </data>
+  <data name="lblMoveDist.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 15</value>
+  </data>
+  <data name="lblMoveDist.Text" xml:space="preserve">
+    <value>Move Distance</value>
+  </data>
+  <data name="txtMoveDist.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="txtMoveDist.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 38</value>
   </data>
   <data name="button12.Font" type="System.Drawing.Font, System.Drawing">
     <value>Cambria, 9.75pt</value>
@@ -3132,11 +3228,29 @@
   <data name="button12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="button12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 82</value>
+  </data>
   <data name="button12.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 23</value>
   </data>
   <data name="button12.Text" xml:space="preserve">
     <value>Get</value>
+  </data>
+  <data name="btnMovePositional.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="btnMovePositional.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnMovePositional.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 38</value>
+  </data>
+  <data name="btnMovePositional.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 23</value>
+  </data>
+  <data name="btnMovePositional.Text" xml:space="preserve">
+    <value>Move</value>
   </data>
   <data name="btnStopPos.Font" type="System.Drawing.Font, System.Drawing">
     <value>Cambria, 9.75pt</value>
@@ -3144,17 +3258,29 @@
   <data name="btnStopPos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="btnStopPos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>173, 38</value>
+  </data>
   <data name="btnStopPos.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 23</value>
   </data>
   <data name="btnStopPos.Text" xml:space="preserve">
     <value>Stop</value>
   </data>
+  <data name="txtMovVelocity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="txtMovVelocity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 82</value>
+  </data>
   <data name="button11.Font" type="System.Drawing.Font, System.Drawing">
     <value>Cambria, 9.75pt</value>
   </data>
   <data name="button11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="button11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>117, 82</value>
   </data>
   <data name="button11.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 23</value>
@@ -3171,92 +3297,110 @@
   <data name="lblMoveVelo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="lblMoveVelo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 64</value>
+  </data>
   <data name="lblMoveVelo.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 15</value>
   </data>
   <data name="lblMoveVelo.Text" xml:space="preserve">
     <value>Move Velocity</value>
   </data>
-  <data name="button10.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cambria, 9.75pt</value>
+  <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 462</value>
   </data>
-  <data name="button10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 112</value>
   </data>
-  <data name="button10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 23</value>
+  <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>89</value>
   </data>
-  <data name="button10.Text" xml:space="preserve">
-    <value>Get</value>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>Positional Moves</value>
   </data>
-  <data name="button9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cambria, 9.75pt</value>
-  </data>
-  <data name="button9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>124, 401</value>
-  </data>
-  <data name="button9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 23</value>
-  </data>
-  <data name="button9.TabIndex" type="System.Int32, mscorlib">
-    <value>76</value>
-  </data>
-  <data name="button9.Text" xml:space="preserve">
-    <value>Set</value>
-  </data>
-  <data name="label33.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label33.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 383</value>
-  </data>
-  <data name="label33.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 15</value>
-  </data>
-  <data name="label33.TabIndex" type="System.Int32, mscorlib">
-    <value>72</value>
-  </data>
-  <data name="label33.Text" xml:space="preserve">
-    <value>Deceleration</value>
-  </data>
-  <data name="txtDecel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cambria, 9.75pt</value>
-  </data>
-  <data name="txtMovVelocity.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cambria, 9.75pt</value>
-  </data>
-  <data name="btnMovePositional.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cambria, 9.75pt</value>
-  </data>
-  <data name="btnMovePositional.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnMovePositional.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 23</value>
-  </data>
-  <data name="btnMovePositional.Text" xml:space="preserve">
-    <value>Move</value>
-  </data>
-  <data name="lblMoveDist.AutoSize" type="System.Boolean, mscorlib">
+  <data name="checkBox11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblMoveDist.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cambria, 9.75pt</value>
+  <data name="checkBox11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 23</value>
   </data>
-  <data name="lblMoveDist.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="checkBox11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 19</value>
+  </data>
+  <data name="checkBox11.Text" xml:space="preserve">
+    <value>I/O-0</value>
+  </data>
+  <data name="checkBox16.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="lblMoveDist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 15</value>
+  <data name="checkBox16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 19</value>
   </data>
-  <data name="lblMoveDist.Text" xml:space="preserve">
-    <value>Move Distance</value>
+  <data name="checkBox16.Text" xml:space="preserve">
+    <value>I/O-5</value>
   </data>
-  <data name="txtMoveDist.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cambria, 9.75pt</value>
+  <data name="checkBox12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 19</value>
+  </data>
+  <data name="checkBox12.Text" xml:space="preserve">
+    <value>I/O-2</value>
+  </data>
+  <data name="checkBox15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 19</value>
+  </data>
+  <data name="checkBox15.Text" xml:space="preserve">
+    <value>I/O-3</value>
+  </data>
+  <data name="checkBox13.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 19</value>
+  </data>
+  <data name="checkBox13.Text" xml:space="preserve">
+    <value>I/O-4</value>
+  </data>
+  <data name="checkBox14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 19</value>
+  </data>
+  <data name="checkBox14.Text" xml:space="preserve">
+    <value>I/O-1</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 574</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 100</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Digital Output Controls</value>
   </data>
   <data name="motorControls.Font" type="System.Drawing.Font, System.Drawing">
     <value>Cambria, 9.75pt, style=Bold, Italic</value>
@@ -3265,7 +3409,7 @@
     <value>250, 683</value>
   </data>
   <data name="motorControls.Text" xml:space="preserve">
-    <value>Motor Controls</value>
+    <value>Availible Controls</value>
   </data>
   <data name="motorControls.Visible" type="System.Boolean, mscorlib">
     <value>False</value>

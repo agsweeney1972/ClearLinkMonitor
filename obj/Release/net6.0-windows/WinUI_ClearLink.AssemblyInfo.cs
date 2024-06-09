@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WinUI_ClearLink")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+562c1e95908bc6aca6495f8bb64665178a802e5f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44c7bc164b150672a8acf311931f65c5c7a87934")]
 [assembly: System.Reflection.AssemblyProductAttribute("WinUI_ClearLink")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WinUI_ClearLink")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

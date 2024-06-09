@@ -58,6 +58,11 @@ namespace WinUI_ClearCore
             checkBox1.Enabled = false;
             checkBox2.Checked = false;
             checkBox2.Enabled = false;
+            rdoShowM0.Enabled = false;
+            rdoShowM1.Enabled = false;
+            rdoShowM2.Enabled = false;
+            rdoShowM3.Enabled = false;
+
             ThisTimer.Tick += new EventHandler(ThisTimer_Tick);
             ThisTimer.Interval = TimeSpan.FromMilliseconds(myDelay);
         }
@@ -272,6 +277,16 @@ namespace WinUI_ClearCore
             rdoMotorFaulted.Checked = Alertbits[10];
             rdoFollowingOverspeed.Checked = Alertbits[11];
 
+
+            if (AlertReg.Any(b => b != 0))
+            {
+                checkBox9.Checked = true;
+            }
+            else
+            {
+                checkBox9.Checked = false;
+                checkBox8.Checked = false;
+            }
 
             /* Feedback Data */
             byte[] CommandedPosition = eeipClient.GetAttributeSingle(0x65, myInstance, 1);
@@ -514,17 +529,11 @@ namespace WinUI_ClearCore
 
                 /* MAC Address Display */
                 byte[] MacAddress = eeipClient.GetAttributeSingle(0xF6, 1, 3);
-
                 string MacDisplay = BitConverter.ToString(MacAddress);
                 label41.Text = MacDisplay;
-
                 byte[] IdentityItems = eeipClient.GetAttributeSingle(0x01, 1, 6);
                 int mySerialNumber = BitConverter.ToInt32(IdentityItems);
-
-
                 byte[] MotorMode = eeipClient.GetAttributeSingle(0x69, 1, 2);
-
-
 
                 bool Mode = BitConverter.ToBoolean(MotorMode, 0);
                 if (Mode)
@@ -546,12 +555,12 @@ namespace WinUI_ClearCore
                     grpFeedback.Visible = true;
                     grpMConnector.Visible = false;
                     motorControls.Visible = true;
-
-
-
-
-
                 }
+
+                rdoShowM0.Enabled = true;
+                rdoShowM1.Enabled = true;
+                rdoShowM2.Enabled = true;
+                rdoShowM3.Enabled = true;
 
             }
             catch (Exception)
@@ -576,12 +585,8 @@ namespace WinUI_ClearCore
         {
             if (checkBox1.Checked)
             {
-
-
                 ThisTimer.Start();
-
             }
-
             else
             {
                 ThisTimer.Stop();
@@ -594,6 +599,17 @@ namespace WinUI_ClearCore
             if (SessionStarted)
             {
                 eeipClient.UnRegisterSession();
+                SessionStarted = false;
+                grpAlertReg.Visible = false;
+                grpStatusReg.Visible = false;
+                grpConfigData.Visible = false;
+                grpFeedback.Visible = false;
+                grpMConnector.Visible = false;
+                motorControls.Visible = false;
+                rdoShowM0.Enabled = false;
+                rdoShowM1.Enabled = false;
+                rdoShowM2.Enabled = false;
+                rdoShowM3.Enabled = false;
             }
 
             else
@@ -1061,6 +1077,84 @@ namespace WinUI_ClearCore
             byte[] CurrentMoveVelocity = eeipClient.GetAttributeSingle(0x66, myInstance, 3);
             int myCurrentMoveVelocity = BitConverter.ToInt32(CurrentMoveVelocity, 0);
             txtMovVelocity.Text = myCurrentMoveVelocity.ToString();
+        }
+
+        private void checkBox11_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox11.Checked)
+            {
+                eeipClient.SetAttributeSingle(0x09, 1, 3, new byte[] { 1 });
+            }
+
+            else
+            {
+                eeipClient.SetAttributeSingle(0x09, 1, 3, new byte[] { 0 });
+            }
+        }
+
+        private void checkBox14_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox14.Checked)
+            {
+                eeipClient.SetAttributeSingle(0x09, 2, 3, new byte[] { 1 });
+            }
+
+            else
+            {
+                eeipClient.SetAttributeSingle(0x09, 2, 3, new byte[] { 0 });
+            }
+        }
+
+        private void checkBox12_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox12.Checked)
+            {
+                eeipClient.SetAttributeSingle(0x09, 3, 3, new byte[] { 1 });
+            }
+
+            else
+            {
+                eeipClient.SetAttributeSingle(0x09, 3, 3, new byte[] { 0 });
+            }
+        }
+
+        private void checkBox15_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox15.Checked)
+            {
+                eeipClient.SetAttributeSingle(0x09, 4, 3, new byte[] { 1 });
+            }
+
+            else
+            {
+                eeipClient.SetAttributeSingle(0x09, 4, 3, new byte[] { 0 });
+            }
+        }
+
+        private void checkBox13_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox13.Checked)
+            {
+                eeipClient.SetAttributeSingle(0x09, 5, 3, new byte[] { 1 });
+            }
+
+            else
+            {
+                eeipClient.SetAttributeSingle(0x09, 5, 3, new byte[] { 0 });
+            }
+        }
+
+        private void checkBox16_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox16.Checked)
+            {
+                eeipClient.SetAttributeSingle(0x09, 6, 3, new byte[] { 1 });
+            }
+
+            else
+            {
+                eeipClient.SetAttributeSingle(0x09, 6, 3, new byte[] { 0 });
+            }
         }
     }
 }

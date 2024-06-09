@@ -38,14 +38,14 @@
             listBox1.ItemHeight = 15;
             listBox1.Location = new Point(0, 0);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(1209, 683);
+            listBox1.Size = new Size(505, 360);
             listBox1.TabIndex = 0;
             // 
             // Discover
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1209, 683);
+            ClientSize = new Size(505, 360);
             Controls.Add(listBox1);
             Name = "Discover";
             Text = "Discover";

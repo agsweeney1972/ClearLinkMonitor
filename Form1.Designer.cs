@@ -269,18 +269,28 @@
             button7 = new Button();
             button8 = new Button();
             motorControls = new GroupBox();
-            button12 = new Button();
-            btnStopPos = new Button();
-            button11 = new Button();
-            lblMoveVelo = new Label();
+            groupBox7 = new GroupBox();
+            groupBox8 = new GroupBox();
             button10 = new Button();
             button9 = new Button();
-            label33 = new Label();
             txtDecel = new TextBox();
-            txtMovVelocity = new TextBox();
-            btnMovePositional = new Button();
+            label33 = new Label();
+            groupBox6 = new GroupBox();
             lblMoveDist = new Label();
             txtMoveDist = new TextBox();
+            button12 = new Button();
+            btnMovePositional = new Button();
+            btnStopPos = new Button();
+            txtMovVelocity = new TextBox();
+            button11 = new Button();
+            lblMoveVelo = new Label();
+            groupBox3 = new GroupBox();
+            checkBox11 = new CheckBox();
+            checkBox16 = new CheckBox();
+            checkBox12 = new CheckBox();
+            checkBox15 = new CheckBox();
+            checkBox13 = new CheckBox();
+            checkBox14 = new CheckBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -295,6 +305,10 @@
             grpCCIOIOStatus.SuspendLayout();
             grpCCIOStatus.SuspendLayout();
             motorControls.SuspendLayout();
+            groupBox7.SuspendLayout();
+            groupBox8.SuspendLayout();
+            groupBox6.SuspendLayout();
+            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // txtIPAddy
@@ -2155,65 +2169,47 @@
             // motorControls
             // 
             resources.ApplyResources(motorControls, "motorControls");
-            motorControls.Controls.Add(button12);
-            motorControls.Controls.Add(btnStopPos);
-            motorControls.Controls.Add(button11);
-            motorControls.Controls.Add(lblMoveVelo);
-            motorControls.Controls.Add(button10);
-            motorControls.Controls.Add(button9);
-            motorControls.Controls.Add(label33);
-            motorControls.Controls.Add(txtDecel);
-            motorControls.Controls.Add(txtMovVelocity);
-            motorControls.Controls.Add(btnMovePositional);
-            motorControls.Controls.Add(lblMoveDist);
-            motorControls.Controls.Add(txtMoveDist);
+            motorControls.Controls.Add(groupBox7);
+            motorControls.Controls.Add(groupBox8);
+            motorControls.Controls.Add(groupBox6);
+            motorControls.Controls.Add(groupBox3);
             motorControls.Controls.Add(checkBox3);
             motorControls.Controls.Add(button8);
-            motorControls.Controls.Add(textBox1);
-            motorControls.Controls.Add(button7);
-            motorControls.Controls.Add(button2);
-            motorControls.Controls.Add(button6);
             motorControls.Controls.Add(checkBox4);
-            motorControls.Controls.Add(button5);
             motorControls.Controls.Add(checkBox5);
-            motorControls.Controls.Add(button4);
             motorControls.Controls.Add(checkBox6);
-            motorControls.Controls.Add(label34);
             motorControls.Controls.Add(checkBox7);
-            motorControls.Controls.Add(button3);
             motorControls.Controls.Add(checkBox8);
-            motorControls.Controls.Add(txtAccel);
             motorControls.Controls.Add(checkBox9);
-            motorControls.Controls.Add(label32);
             motorControls.Controls.Add(checkBox10);
             motorControls.Name = "motorControls";
             motorControls.TabStop = false;
             // 
-            // button12
+            // groupBox7
             // 
-            resources.ApplyResources(button12, "button12");
-            button12.Name = "button12";
-            button12.UseVisualStyleBackColor = true;
-            button12.Click += button12_Click;
+            resources.ApplyResources(groupBox7, "groupBox7");
+            groupBox7.Controls.Add(label32);
+            groupBox7.Controls.Add(button4);
+            groupBox7.Controls.Add(button5);
+            groupBox7.Controls.Add(button6);
+            groupBox7.Controls.Add(button2);
+            groupBox7.Controls.Add(textBox1);
+            groupBox7.Name = "groupBox7";
+            groupBox7.TabStop = false;
             // 
-            // btnStopPos
+            // groupBox8
             // 
-            resources.ApplyResources(btnStopPos, "btnStopPos");
-            btnStopPos.Name = "btnStopPos";
-            btnStopPos.UseVisualStyleBackColor = true;
-            btnStopPos.Click += btnStopPos_Click;
-            // 
-            // button11
-            // 
-            resources.ApplyResources(button11, "button11");
-            button11.Name = "button11";
-            button11.UseVisualStyleBackColor = true;
-            button11.Click += button11_Click;
-            // 
-            // lblMoveVelo
-            // 
-            resources.ApplyResources(lblMoveVelo, "lblMoveVelo");
-            lblMoveVelo.Name = "lblMoveVelo";
+            resources.ApplyResources(groupBox8, "groupBox8");
+            groupBox8.Controls.Add(label34);
+            groupBox8.Controls.Add(txtAccel);
+            groupBox8.Controls.Add(button3);
+            groupBox8.Controls.Add(button10);
+            groupBox8.Controls.Add(button7);
+            groupBox8.Controls.Add(button9);
+            groupBox8.Controls.Add(txtDecel);
+            groupBox8.Controls.Add(label33);
+            groupBox8.Name = "groupBox8";
+            groupBox8.TabStop = false;
             // 
             // button10
             // 
@@ -2229,27 +2225,29 @@
             button9.UseVisualStyleBackColor = true;
             button9.Click += button9_Click_1;
             // 
-            // label33
-            // 
-            resources.ApplyResources(label33, "label33");
-            label33.Name = "label33";
-            // 
             // txtDecel
             // 
             resources.ApplyResources(txtDecel, "txtDecel");
             txtDecel.Name = "txtDecel";
             // 
-            // txtMovVelocity
+            // label33
             // 
-            resources.ApplyResources(txtMovVelocity, "txtMovVelocity");
-            txtMovVelocity.Name = "txtMovVelocity";
+            resources.ApplyResources(label33, "label33");
+            label33.Name = "label33";
             // 
-            // btnMovePositional
+            // groupBox6
             // 
-            resources.ApplyResources(btnMovePositional, "btnMovePositional");
-            btnMovePositional.Name = "btnMovePositional";
-            btnMovePositional.UseVisualStyleBackColor = true;
-            btnMovePositional.Click += btnMovePositional_Click;
+            resources.ApplyResources(groupBox6, "groupBox6");
+            groupBox6.Controls.Add(lblMoveDist);
+            groupBox6.Controls.Add(txtMoveDist);
+            groupBox6.Controls.Add(button12);
+            groupBox6.Controls.Add(btnMovePositional);
+            groupBox6.Controls.Add(btnStopPos);
+            groupBox6.Controls.Add(txtMovVelocity);
+            groupBox6.Controls.Add(button11);
+            groupBox6.Controls.Add(lblMoveVelo);
+            groupBox6.Name = "groupBox6";
+            groupBox6.TabStop = false;
             // 
             // lblMoveDist
             // 
@@ -2260,6 +2258,98 @@
             // 
             resources.ApplyResources(txtMoveDist, "txtMoveDist");
             txtMoveDist.Name = "txtMoveDist";
+            // 
+            // button12
+            // 
+            resources.ApplyResources(button12, "button12");
+            button12.Name = "button12";
+            button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click;
+            // 
+            // btnMovePositional
+            // 
+            resources.ApplyResources(btnMovePositional, "btnMovePositional");
+            btnMovePositional.Name = "btnMovePositional";
+            btnMovePositional.UseVisualStyleBackColor = true;
+            btnMovePositional.Click += btnMovePositional_Click;
+            // 
+            // btnStopPos
+            // 
+            resources.ApplyResources(btnStopPos, "btnStopPos");
+            btnStopPos.Name = "btnStopPos";
+            btnStopPos.UseVisualStyleBackColor = true;
+            btnStopPos.Click += btnStopPos_Click;
+            // 
+            // txtMovVelocity
+            // 
+            resources.ApplyResources(txtMovVelocity, "txtMovVelocity");
+            txtMovVelocity.Name = "txtMovVelocity";
+            // 
+            // button11
+            // 
+            resources.ApplyResources(button11, "button11");
+            button11.Name = "button11";
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
+            // 
+            // lblMoveVelo
+            // 
+            resources.ApplyResources(lblMoveVelo, "lblMoveVelo");
+            lblMoveVelo.Name = "lblMoveVelo";
+            // 
+            // groupBox3
+            // 
+            resources.ApplyResources(groupBox3, "groupBox3");
+            groupBox3.Controls.Add(checkBox11);
+            groupBox3.Controls.Add(checkBox16);
+            groupBox3.Controls.Add(checkBox12);
+            groupBox3.Controls.Add(checkBox15);
+            groupBox3.Controls.Add(checkBox13);
+            groupBox3.Controls.Add(checkBox14);
+            groupBox3.Name = "groupBox3";
+            groupBox3.TabStop = false;
+            // 
+            // checkBox11
+            // 
+            resources.ApplyResources(checkBox11, "checkBox11");
+            checkBox11.Name = "checkBox11";
+            checkBox11.UseVisualStyleBackColor = true;
+            checkBox11.CheckedChanged += checkBox11_CheckedChanged;
+            // 
+            // checkBox16
+            // 
+            resources.ApplyResources(checkBox16, "checkBox16");
+            checkBox16.Name = "checkBox16";
+            checkBox16.UseVisualStyleBackColor = true;
+            checkBox16.CheckedChanged += checkBox16_CheckedChanged;
+            // 
+            // checkBox12
+            // 
+            resources.ApplyResources(checkBox12, "checkBox12");
+            checkBox12.Name = "checkBox12";
+            checkBox12.UseVisualStyleBackColor = true;
+            checkBox12.CheckedChanged += checkBox12_CheckedChanged;
+            // 
+            // checkBox15
+            // 
+            resources.ApplyResources(checkBox15, "checkBox15");
+            checkBox15.Name = "checkBox15";
+            checkBox15.UseVisualStyleBackColor = true;
+            checkBox15.CheckedChanged += checkBox15_CheckedChanged;
+            // 
+            // checkBox13
+            // 
+            resources.ApplyResources(checkBox13, "checkBox13");
+            checkBox13.Name = "checkBox13";
+            checkBox13.UseVisualStyleBackColor = true;
+            checkBox13.CheckedChanged += checkBox13_CheckedChanged;
+            // 
+            // checkBox14
+            // 
+            resources.ApplyResources(checkBox14, "checkBox14");
+            checkBox14.Name = "checkBox14";
+            checkBox14.UseVisualStyleBackColor = true;
+            checkBox14.CheckedChanged += checkBox14_CheckedChanged;
             // 
             // Form1
             // 
@@ -2318,6 +2408,14 @@
             grpCCIOStatus.PerformLayout();
             motorControls.ResumeLayout(false);
             motorControls.PerformLayout();
+            groupBox7.ResumeLayout(false);
+            groupBox7.PerformLayout();
+            groupBox8.ResumeLayout(false);
+            groupBox8.PerformLayout();
+            groupBox6.ResumeLayout(false);
+            groupBox6.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -2575,5 +2673,15 @@
         private Label lblMoveVelo;
         private Button btnStopPos;
         private Button button12;
+        private CheckBox checkBox11;
+        private GroupBox groupBox3;
+        private CheckBox checkBox16;
+        private CheckBox checkBox12;
+        private CheckBox checkBox15;
+        private CheckBox checkBox13;
+        private CheckBox checkBox14;
+        private GroupBox groupBox6;
+        private GroupBox groupBox7;
+        private GroupBox groupBox8;
     }
 }
