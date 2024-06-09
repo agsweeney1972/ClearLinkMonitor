@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="txtIPAddy.Text" xml:space="preserve">
+    <value>172.16.82.34</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="rdoDip12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -412,10 +415,10 @@
     <value>MiddleLeft</value>
   </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 719</value>
+    <value>0, 730</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>849, 22</value>
+    <value>1108, 22</value>
   </data>
   <data name="rdoLoadVelocityMoveAck.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2818,7 +2821,7 @@
     <value>NoControl</value>
   </data>
   <data name="label27.Location" type="System.Drawing.Point, System.Drawing">
-    <value>669, 698</value>
+    <value>928, 705</value>
   </data>
   <data name="label27.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 14</value>
@@ -2847,8 +2850,296 @@
   <data name="button1.Text" xml:space="preserve">
     <value>Discover Devices</value>
   </data>
+  <data name="checkBox3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="checkBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 24</value>
+  </data>
+  <data name="checkBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 19</value>
+  </data>
+  <data name="checkBox3.Text" xml:space="preserve">
+    <value>Enable Motor</value>
+  </data>
+  <data name="textBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 278</value>
+  </data>
+  <data name="button2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>124, 278</value>
+  </data>
+  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 23</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>FWD</value>
+  </data>
+  <data name="checkBox4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="checkBox4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 49</value>
+  </data>
+  <data name="checkBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 19</value>
+  </data>
+  <data name="checkBox4.Text" xml:space="preserve">
+    <value>Absolute Flag</value>
+  </data>
+  <data name="checkBox5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="checkBox5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 74</value>
+  </data>
+  <data name="checkBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 19</value>
+  </data>
+  <data name="checkBox5.Text" xml:space="preserve">
+    <value>Homing Move Flag</value>
+  </data>
+  <data name="checkBox6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="checkBox6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 99</value>
+  </data>
+  <data name="checkBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 19</value>
+  </data>
+  <data name="checkBox6.Text" xml:space="preserve">
+    <value>Load Position Move</value>
+  </data>
+  <data name="checkBox7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="checkBox7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 124</value>
+  </data>
+  <data name="checkBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 19</value>
+  </data>
+  <data name="checkBox7.Text" xml:space="preserve">
+    <value>Load Velocity Move</value>
+  </data>
+  <data name="checkBox8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="checkBox8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 149</value>
+  </data>
+  <data name="checkBox8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 19</value>
+  </data>
+  <data name="checkBox8.Text" xml:space="preserve">
+    <value>SW E-Stop</value>
+  </data>
+  <data name="checkBox9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="checkBox9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 174</value>
+  </data>
+  <data name="checkBox9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 19</value>
+  </data>
+  <data name="checkBox9.Text" xml:space="preserve">
+    <value>Clear Alerts</value>
+  </data>
+  <data name="checkBox10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="checkBox10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 199</value>
+  </data>
+  <data name="checkBox10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 19</value>
+  </data>
+  <data name="checkBox10.Text" xml:space="preserve">
+    <value>Clear Motor Fault</value>
+  </data>
+  <data name="label32.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 260</value>
+  </data>
+  <data name="label32.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 15</value>
+  </data>
+  <data name="label32.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="label32.Text" xml:space="preserve">
+    <value>Jog Velocity</value>
+  </data>
+  <data name="label34.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label34.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 339</value>
+  </data>
+  <data name="label34.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 15</value>
+  </data>
+  <data name="label34.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="label34.Text" xml:space="preserve">
+    <value>Acceleration</value>
+  </data>
+  <data name="button3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>124, 357</value>
+  </data>
+  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 23</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="txtAccel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="txtAccel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 357</value>
+  </data>
+  <data name="button4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>124, 307</value>
+  </data>
+  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 23</value>
+  </data>
+  <data name="button4.Text" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="button5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="button5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 278</value>
+  </data>
+  <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 23</value>
+  </data>
+  <data name="button5.Text" xml:space="preserve">
+    <value>REV</value>
+  </data>
+  <data name="button6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="button6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 307</value>
+  </data>
+  <data name="button6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="button6.Text" xml:space="preserve">
+    <value>Set Only</value>
+  </data>
+  <data name="button7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="button7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 357</value>
+  </data>
+  <data name="button7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 23</value>
+  </data>
+  <data name="button7.Text" xml:space="preserve">
+    <value>Get</value>
+  </data>
+  <data name="button8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt</value>
+  </data>
+  <data name="button8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 227</value>
+  </data>
+  <data name="button8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 23</value>
+  </data>
+  <data name="button8.Text" xml:space="preserve">
+    <value>Zero Position Counter</value>
+  </data>
+  <data name="motorControls.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 9.75pt, style=Bold, Italic</value>
+  </data>
+  <data name="motorControls.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 683</value>
+  </data>
+  <data name="motorControls.Text" xml:space="preserve">
+    <value>Motor Controls</value>
+  </data>
+  <data name="motorControls.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>849, 741</value>
+    <value>1108, 752</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

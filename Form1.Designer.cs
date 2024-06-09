@@ -249,6 +249,26 @@
             label27 = new Label();
             linkLabel1 = new LinkLabel();
             button1 = new Button();
+            checkBox3 = new CheckBox();
+            textBox1 = new TextBox();
+            button2 = new Button();
+            checkBox4 = new CheckBox();
+            checkBox5 = new CheckBox();
+            checkBox6 = new CheckBox();
+            checkBox7 = new CheckBox();
+            checkBox8 = new CheckBox();
+            checkBox9 = new CheckBox();
+            checkBox10 = new CheckBox();
+            label32 = new Label();
+            label34 = new Label();
+            button3 = new Button();
+            txtAccel = new TextBox();
+            button4 = new Button();
+            button5 = new Button();
+            button6 = new Button();
+            button7 = new Button();
+            button8 = new Button();
+            motorControls = new GroupBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -262,6 +282,7 @@
             groupBox4.SuspendLayout();
             grpCCIOIOStatus.SuspendLayout();
             grpCCIOStatus.SuspendLayout();
+            motorControls.SuspendLayout();
             SuspendLayout();
             // 
             // txtIPAddy
@@ -1994,12 +2015,163 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // checkBox3
+            // 
+            resources.ApplyResources(checkBox3, "checkBox3");
+            checkBox3.Name = "checkBox3";
+            checkBox3.UseVisualStyleBackColor = true;
+            checkBox3.CheckedChanged += checkBox3_CheckedChanged;
+            // 
+            // textBox1
+            // 
+            resources.ApplyResources(textBox1, "textBox1");
+            textBox1.Name = "textBox1";
+            // 
+            // button2
+            // 
+            resources.ApplyResources(button2, "button2");
+            button2.Name = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // checkBox4
+            // 
+            resources.ApplyResources(checkBox4, "checkBox4");
+            checkBox4.Name = "checkBox4";
+            checkBox4.UseVisualStyleBackColor = true;
+            checkBox4.CheckedChanged += checkBox4_CheckedChanged;
+            // 
+            // checkBox5
+            // 
+            resources.ApplyResources(checkBox5, "checkBox5");
+            checkBox5.Name = "checkBox5";
+            checkBox5.UseVisualStyleBackColor = true;
+            checkBox5.CheckedChanged += checkBox5_CheckedChanged;
+            // 
+            // checkBox6
+            // 
+            resources.ApplyResources(checkBox6, "checkBox6");
+            checkBox6.Name = "checkBox6";
+            checkBox6.UseVisualStyleBackColor = true;
+            checkBox6.CheckedChanged += checkBox6_CheckedChanged;
+            // 
+            // checkBox7
+            // 
+            resources.ApplyResources(checkBox7, "checkBox7");
+            checkBox7.Name = "checkBox7";
+            checkBox7.UseVisualStyleBackColor = true;
+            checkBox7.CheckedChanged += checkBox7_CheckedChanged;
+            // 
+            // checkBox8
+            // 
+            resources.ApplyResources(checkBox8, "checkBox8");
+            checkBox8.Name = "checkBox8";
+            checkBox8.UseVisualStyleBackColor = true;
+            checkBox8.CheckedChanged += checkBox8_CheckedChanged;
+            // 
+            // checkBox9
+            // 
+            resources.ApplyResources(checkBox9, "checkBox9");
+            checkBox9.Name = "checkBox9";
+            checkBox9.UseVisualStyleBackColor = true;
+            checkBox9.CheckedChanged += checkBox9_CheckedChanged;
+            // 
+            // checkBox10
+            // 
+            resources.ApplyResources(checkBox10, "checkBox10");
+            checkBox10.Name = "checkBox10";
+            checkBox10.UseVisualStyleBackColor = true;
+            checkBox10.CheckedChanged += checkBox10_CheckedChanged;
+            // 
+            // label32
+            // 
+            resources.ApplyResources(label32, "label32");
+            label32.Name = "label32";
+            // 
+            // label34
+            // 
+            resources.ApplyResources(label34, "label34");
+            label34.Name = "label34";
+            // 
+            // button3
+            // 
+            resources.ApplyResources(button3, "button3");
+            button3.Name = "button3";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // txtAccel
+            // 
+            resources.ApplyResources(txtAccel, "txtAccel");
+            txtAccel.Name = "txtAccel";
+            // 
+            // button4
+            // 
+            resources.ApplyResources(button4, "button4");
+            button4.Name = "button4";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button5
+            // 
+            resources.ApplyResources(button5, "button5");
+            button5.Name = "button5";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // button6
+            // 
+            resources.ApplyResources(button6, "button6");
+            button6.Name = "button6";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // button7
+            // 
+            resources.ApplyResources(button7, "button7");
+            button7.Name = "button7";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // button8
+            // 
+            resources.ApplyResources(button8, "button8");
+            button8.Name = "button8";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
+            // motorControls
+            // 
+            resources.ApplyResources(motorControls, "motorControls");
+            motorControls.Controls.Add(checkBox3);
+            motorControls.Controls.Add(button8);
+            motorControls.Controls.Add(textBox1);
+            motorControls.Controls.Add(button7);
+            motorControls.Controls.Add(button2);
+            motorControls.Controls.Add(button6);
+            motorControls.Controls.Add(checkBox4);
+            motorControls.Controls.Add(button5);
+            motorControls.Controls.Add(checkBox5);
+            motorControls.Controls.Add(button4);
+            motorControls.Controls.Add(checkBox6);
+            motorControls.Controls.Add(label34);
+            motorControls.Controls.Add(checkBox7);
+            motorControls.Controls.Add(button3);
+            motorControls.Controls.Add(checkBox8);
+            motorControls.Controls.Add(txtAccel);
+            motorControls.Controls.Add(checkBox9);
+            motorControls.Controls.Add(label32);
+            motorControls.Controls.Add(checkBox10);
+            motorControls.Name = "motorControls";
+            motorControls.TabStop = false;
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.Disable;
             BackColor = SystemColors.ScrollBar;
+            Controls.Add(motorControls);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
             Controls.Add(label27);
@@ -2048,6 +2220,8 @@
             grpCCIOIOStatus.PerformLayout();
             grpCCIOStatus.ResumeLayout(false);
             grpCCIOStatus.PerformLayout();
+            motorControls.ResumeLayout(false);
+            motorControls.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -2273,5 +2447,25 @@
         private Label label31;
         private LinkLabel linkLabel1;
         private Button button1;
+        private TextBox textBox1;
+        private Button button2;
+        private CheckBox checkBox5;
+        private CheckBox checkBox6;
+        private CheckBox checkBox7;
+        private CheckBox checkBox8;
+        private CheckBox checkBox9;
+        private CheckBox checkBox10;
+        private Label label32;
+        private CheckBox checkBox3;
+        private CheckBox checkBox4;
+        private Label label34;
+        private Button button3;
+        private TextBox txtAccel;
+        private Button button4;
+        private Button button5;
+        private Button button6;
+        private Button button7;
+        private Button button8;
+        private GroupBox motorControls;
     }
 }

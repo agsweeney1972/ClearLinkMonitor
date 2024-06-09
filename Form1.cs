@@ -21,6 +21,17 @@ namespace WinUI_ClearCore
         int myCount { get; set; } = 0;
         int myInstance { get; set; } = 1;
         int myDelay { get; set; } = 250;
+
+        uint bitOne = 0;
+        uint bitTwo = 0;
+        uint bitThree = 0;
+        uint bitFour = 0;
+        uint bitFive = 0;
+        uint bitSix = 0;
+        uint bitSeven = 0;
+        uint bitEight = 0;
+
+
         bool SessionStarted { get; set; } = false;
 
 
@@ -153,7 +164,22 @@ namespace WinUI_ClearCore
             rdoCCIO8_6.Checked = myCCIOIOStatus[62];
             rdoCCIO8_7.Checked = myCCIOIOStatus[63];
 
+            if (rdoLoadVelocityMoveAck.Checked)
+            {
+                checkBox7.Checked = false;
+            };
 
+            if (rdoClearMotorFaultAct.Checked)
+            {
+                checkBox10.Checked = false;
+            };
+
+            if (rdoAddToPosACK.Checked)
+            {
+                byte[] intZero = BitConverter.GetBytes(0);
+                eeipClient.SetAttributeSingle(0x66, myInstance, 7, intZero);
+
+            }
 
 
 
@@ -210,6 +236,10 @@ namespace WinUI_ClearCore
             rdoLoadPosMoveAck.Checked = StatusBits[19];
             rdoLoadVelocityMoveAck.Checked = StatusBits[20];
             rdoClearMotorFaultAct.Checked = StatusBits[21];
+
+            if (rdoStepsActive.Checked) { button8.Enabled = false; };
+            if (!rdoStepsActive.Checked) { button8.Enabled = true; };
+
 
             /* Change the StatusReg Radio Buttons */
             byte[] AlertReg = eeipClient.GetAttributeSingle(0x65, myInstance, 8);
@@ -490,6 +520,7 @@ namespace WinUI_ClearCore
                     grpConfigData.Visible = false;
                     grpFeedback.Visible = false;
                     grpMConnector.Visible = true;
+                    motorControls.Visible = false;
                 }
                 else
                 {
@@ -499,6 +530,7 @@ namespace WinUI_ClearCore
                     grpConfigData.Visible = true;
                     grpFeedback.Visible = true;
                     grpMConnector.Visible = false;
+                    motorControls.Visible = true;
 
 
 
@@ -518,6 +550,9 @@ namespace WinUI_ClearCore
             checkBox1.Checked = true;
             checkBox1.Enabled = true;
             checkBox2.Enabled = true;
+            rdoShowM0.Checked = true;
+            myInstance = 1;
+            UpdateOutputRegs();
         }
 
 
@@ -597,6 +632,7 @@ namespace WinUI_ClearCore
         {
             UpdateMyLabels();
 
+
         }
         private void UpdateMyLabels()
         {
@@ -619,6 +655,9 @@ namespace WinUI_ClearCore
                 grpStatusReg.Text = "Motor 0 Status Reg";
                 grpFeedback.Text = "Motor 0 Motion Data";
                 grpConfigData.Text = "Motor 0 Config Data";
+                myInstance = 1; 
+                UpdateOutputRegs();
+
 
             }
 
@@ -628,6 +667,8 @@ namespace WinUI_ClearCore
                 grpStatusReg.Text = "Motor 1 Status Reg";
                 grpFeedback.Text = "Motor 1 Motion Data";
                 grpConfigData.Text = "Motor 1 Config Data";
+                myInstance = 2;
+                UpdateOutputRegs();
 
             }
 
@@ -637,6 +678,8 @@ namespace WinUI_ClearCore
                 grpStatusReg.Text = "Motor 2 Status Reg";
                 grpFeedback.Text = "Motor 2 Motion Data";
                 grpConfigData.Text = "Motor 2 Config Data";
+                myInstance = 3;
+                UpdateOutputRegs();
 
             }
 
@@ -646,10 +689,17 @@ namespace WinUI_ClearCore
                 grpStatusReg.Text = "Motor 3 Status Reg";
                 grpFeedback.Text = "Motor 3 Motion Data";
                 grpConfigData.Text = "Motor 3 Config Data";
+                myInstance = 4;
+                UpdateOutputRegs();
 
             }
 
+
+
+
         }
+
+
 
         private void grpCCIOIOStatus_Enter(object sender, EventArgs e)
         {
@@ -686,6 +736,266 @@ namespace WinUI_ClearCore
         {
             Discover discover = new Discover();
             discover.ShowDialog();
+        }
+
+
+
+        private void button2_Click(object sender, EventArgs e)
+
+        {
+
+            int myVelocity = Convert.ToInt32(textBox1.Text);
+
+
+            byte[] intBytes = BitConverter.GetBytes(myVelocity);
+            //Array.Reverse(intBytes);
+            byte[] result = intBytes;
+
+
+            eeipClient.SetAttributeSingle(0x66, myInstance, 2, result);
+            checkBox7.Checked = true;
+        }
+
+        private void updateDWORD()
+        {
+
+            uint myBoxes = bitOne | bitTwo | bitThree | bitFour | bitFive | bitSix | bitSeven | bitEight;
+            byte[] bytes = BitConverter.GetBytes(myBoxes);
+            eeipClient.SetAttributeSingle(0x66, myInstance, 6, bytes);
+
+        }
+
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (checkBox3.Checked)
+            {
+                bitOne = 0b_0000_0001;
+            }
+            else if (!checkBox3.Checked)
+            {
+                bitOne = 0b_0000_0000;
+            }
+            updateDWORD();
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (checkBox4.Checked)
+            {
+                bitTwo = 0b_0000_0010;
+            }
+            else if (!checkBox4.Checked)
+            {
+                bitTwo = 0b_0000_0000;
+            }
+            updateDWORD();
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked)
+            {
+                bitThree = 0b_0000_0100;
+            }
+            else if (!checkBox5.Checked)
+            {
+                bitThree = 0b_0000_0000;
+            }
+            updateDWORD();
+
+        }
+
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox6.Checked)
+            {
+                bitFour = 0b_0000_1000;
+            }
+            else if (!checkBox6.Checked)
+            {
+                bitFour = 0b_0000_0000;
+            }
+            updateDWORD();
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox7.Checked)
+            {
+                bitFive = 0b_0001_0000;
+            }
+            else if (!checkBox7.Checked)
+            {
+                bitFive = 0b_0000_0000;
+            }
+            updateDWORD();
+
+        }
+
+        private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox8.Checked)
+            {
+                bitSix = 0b_0010_0000;
+            }
+            else if (!checkBox8.Checked)
+            {
+                bitSix = 0b_0000_0000;
+            }
+            updateDWORD();
+        }
+
+        private void checkBox9_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox9.Checked)
+            {
+                bitSeven = 0b_0100_0000;
+            }
+            else if (!checkBox9.Checked)
+            {
+                bitSeven = 0b_0000_0000;
+            }
+            updateDWORD();
+        }
+
+        private void checkBox10_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox10.Checked)
+            {
+                bitEight = 0b_1000_0000;
+            }
+            else if (!checkBox10.Checked)
+            {
+                bitEight = 0b_0000_0000;
+            }
+            updateDWORD();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int myAccel = Convert.ToInt32(txtAccel.Text);
+
+
+            byte[] intBytes = BitConverter.GetBytes(myAccel);
+            //Array.Reverse(intBytes);
+            byte[] accelResult = intBytes;
+
+
+            eeipClient.SetAttributeSingle(0x66, myInstance, 4, accelResult);
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int myVelocity = 0;
+
+
+            byte[] intBytes = BitConverter.GetBytes(myVelocity);
+            //Array.Reverse(intBytes);
+            byte[] result = intBytes;
+
+            eeipClient.SetAttributeSingle(0x66, myInstance, 2, result);
+            checkBox7.Checked = true;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            int myVelocity = Convert.ToInt32(textBox1.Text);
+
+            int myReVelocity = myVelocity * -1;
+            byte[] intBytes = BitConverter.GetBytes(myReVelocity);
+
+            byte[] result = intBytes;
+
+
+            eeipClient.SetAttributeSingle(0x66, myInstance, 2, result);
+            checkBox7.Checked = true;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int myVelocity = Convert.ToInt32(textBox1.Text);
+
+
+            byte[] intBytes = BitConverter.GetBytes(myVelocity);
+            //Array.Reverse(intBytes);
+            byte[] result = intBytes;
+
+
+            eeipClient.SetAttributeSingle(0x66, myInstance, 2, result);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+            byte[] CurrentAccel = eeipClient.GetAttributeSingle(0x66, myInstance, 4);
+            int myCurrentAccel = BitConverter.ToInt32(CurrentAccel, 0);
+            txtAccel.Text = myCurrentAccel.ToString();
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            byte[] CommandedPosition = eeipClient.GetAttributeSingle(0x65, myInstance, 1);
+            int myCommandedPosition = BitConverter.ToInt32(CommandedPosition, 0);
+            int myCurrentPosition = myCommandedPosition * -1;
+            byte[] intBytes = BitConverter.GetBytes(myCurrentPosition);
+            //Array.Reverse(intBytes);
+            byte[] result = intBytes;
+            eeipClient.SetAttributeSingle(0x66, myInstance, 7, result);
+
+
+
+        }
+
+        private void UpdateOutputRegs()
+        {
+            /* Step and Direction Motor Output Register Objects */
+
+            /* Output Register DWORD Valid bits 0-7 */
+            byte[] thisControlReg = eeipClient.GetAttributeSingle(0x66, myInstance, 6);
+
+
+            var myControlReg = new BitArray(thisControlReg);
+            /*
+             * Bit 0 Motor Enable
+             * Bit 1 Absolute Flag
+             * Bit 2 Homing Move Flag
+             * Bit 3 Load Position Move Flag
+             * Bit 4 Load Velocity Move Flag
+             * Bit 5 SW E-Stop
+             * Bit 6 Clear Alerts
+             * Bit 7 Clear Motor Fault
+            */
+
+            checkBox3.Checked = myControlReg[0];
+            checkBox4.Checked = myControlReg[1];
+            checkBox5.Checked = myControlReg[2];
+            checkBox6.Checked = myControlReg[3];
+            checkBox7.Checked = myControlReg[4];
+            checkBox8.Checked = myControlReg[5];
+            checkBox9.Checked = myControlReg[6];
+            checkBox10.Checked = myControlReg[7];
+
+            byte[] CurrentAccel = eeipClient.GetAttributeSingle(0x66, myInstance, 4);
+            int myCurrentAccel = BitConverter.ToInt32(CurrentAccel, 0);
+            txtAccel.Text = myCurrentAccel.ToString();
+
+
+            byte[] CurrentVelocity = eeipClient.GetAttributeSingle(0x66, myInstance, 2);
+            int myCurrentVeloc = BitConverter.ToInt32(CurrentVelocity, 0);
+            textBox1.Text = myCurrentVeloc.ToString();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            UpdateOutputRegs();
         }
     }
 }
